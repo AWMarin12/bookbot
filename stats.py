@@ -5,6 +5,8 @@ def get_count_chars(book):
     counts = {}
     for char in book:
         char = char.lower()
+        if char == "\n":
+            char = "\\n"
         if char in counts:
             counts[char] += 1
         else:
